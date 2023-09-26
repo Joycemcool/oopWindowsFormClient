@@ -32,5 +32,25 @@ namespace ass1oopClientForm
             String message = textBoxMessage.Text;
             textBoxConversation.Text = message;
         }
+
+        private void toolStripComboBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBoxMessage_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

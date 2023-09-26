@@ -29,91 +29,270 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip3 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.gameToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.networkToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip4 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.contextMenuStrip5 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.gameToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip6 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.gameToolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.helloToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.toolStripGame = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip7 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.toolStripTextBoxExit = new System.Windows.Forms.ToolStripTextBox();
+            this.networkToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripTextBoxConnect = new System.Windows.Forms.ToolStripTextBox();
+            this.toolStripTextBoxDicsonnect = new System.Windows.Forms.ToolStripTextBox();
+            this.textBoxConversation = new System.Windows.Forms.TextBox();
             this.textBoxMessage = new System.Windows.Forms.TextBox();
             this.buttonSend = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.textBoxGame = new System.Windows.Forms.TextBox();
             this.labelConversation = new System.Windows.Forms.Label();
-            this.textBoxConversation = new System.Windows.Forms.TextBox();
+            this.contextMenuStrip3.SuspendLayout();
+            this.contextMenuStrip5.SuspendLayout();
+            this.contextMenuStrip6.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(45, 236);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(128, 13);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Type your messages here";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // textBoxMessage
+            // contextMenuStrip2
             // 
-            this.textBoxMessage.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.textBoxMessage.Location = new System.Drawing.Point(48, 255);
-            this.textBoxMessage.Name = "textBoxMessage";
-            this.textBoxMessage.Size = new System.Drawing.Size(316, 20);
-            this.textBoxMessage.TabIndex = 2;
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(61, 4);
             // 
-            // buttonSend
+            // contextMenuStrip3
             // 
-            this.buttonSend.Location = new System.Drawing.Point(379, 252);
-            this.buttonSend.Name = "buttonSend";
-            this.buttonSend.Size = new System.Drawing.Size(75, 23);
-            this.buttonSend.TabIndex = 3;
-            this.buttonSend.Text = "Send";
-            this.buttonSend.UseVisualStyleBackColor = true;
-            this.buttonSend.Click += new System.EventHandler(this.buttonSend_Click);
+            this.contextMenuStrip3.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gameToolStripMenuItem});
+            this.contextMenuStrip3.Name = "contextMenuStrip3";
+            this.contextMenuStrip3.Size = new System.Drawing.Size(106, 26);
             // 
-            // labelConversation
+            // gameToolStripMenuItem
             // 
-            this.labelConversation.AutoSize = true;
-            this.labelConversation.Location = new System.Drawing.Point(48, 299);
-            this.labelConversation.Name = "labelConversation";
-            this.labelConversation.Size = new System.Drawing.Size(69, 13);
-            this.labelConversation.TabIndex = 4;
-            this.labelConversation.Text = "Conversation";
+            this.gameToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.networkToolStripMenuItem});
+            this.gameToolStripMenuItem.Name = "gameToolStripMenuItem";
+            this.gameToolStripMenuItem.Size = new System.Drawing.Size(105, 22);
+            this.gameToolStripMenuItem.Text = "Game";
+            // 
+            // networkToolStripMenuItem
+            // 
+            this.networkToolStripMenuItem.Name = "networkToolStripMenuItem";
+            this.networkToolStripMenuItem.Size = new System.Drawing.Size(119, 22);
+            this.networkToolStripMenuItem.Text = "Network";
+            // 
+            // contextMenuStrip4
+            // 
+            this.contextMenuStrip4.Name = "contextMenuStrip4";
+            this.contextMenuStrip4.Size = new System.Drawing.Size(61, 4);
+            // 
+            // contextMenuStrip5
+            // 
+            this.contextMenuStrip5.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gameToolStripMenuItem1});
+            this.contextMenuStrip5.Name = "contextMenuStrip5";
+            this.contextMenuStrip5.Size = new System.Drawing.Size(106, 26);
+            // 
+            // gameToolStripMenuItem1
+            // 
+            this.gameToolStripMenuItem1.Name = "gameToolStripMenuItem1";
+            this.gameToolStripMenuItem1.Size = new System.Drawing.Size(105, 22);
+            this.gameToolStripMenuItem1.Text = "Game";
+            // 
+            // contextMenuStrip6
+            // 
+            this.contextMenuStrip6.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.gameToolStripMenuItem2,
+            this.helloToolStripMenuItem});
+            this.contextMenuStrip6.Name = "contextMenuStrip6";
+            this.contextMenuStrip6.Size = new System.Drawing.Size(105, 48);
+            // 
+            // gameToolStripMenuItem2
+            // 
+            this.gameToolStripMenuItem2.Name = "gameToolStripMenuItem2";
+            this.gameToolStripMenuItem2.Size = new System.Drawing.Size(104, 22);
+            this.gameToolStripMenuItem2.Text = "game";
+            // 
+            // helloToolStripMenuItem
+            // 
+            this.helloToolStripMenuItem.Name = "helloToolStripMenuItem";
+            this.helloToolStripMenuItem.Size = new System.Drawing.Size(104, 22);
+            this.helloToolStripMenuItem.Text = "hello";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripGame,
+            this.networkToolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(509, 24);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "Network";
+            // 
+            // toolStripGame
+            // 
+            this.toolStripGame.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBoxExit});
+            this.toolStripGame.Name = "toolStripGame";
+            this.toolStripGame.Size = new System.Drawing.Size(50, 20);
+            this.toolStripGame.Text = "Game";
+            this.toolStripGame.Click += new System.EventHandler(this.toolStripMenuItem1_Click);
+            // 
+            // contextMenuStrip7
+            // 
+            this.contextMenuStrip7.Name = "contextMenuStrip7";
+            this.contextMenuStrip7.Size = new System.Drawing.Size(61, 4);
+            // 
+            // toolStripTextBoxExit
+            // 
+            this.toolStripTextBoxExit.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBoxExit.Name = "toolStripTextBoxExit";
+            this.toolStripTextBoxExit.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBoxExit.Text = "Exit";
+            // 
+            // networkToolStripMenuItem1
+            // 
+            this.networkToolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripTextBoxConnect,
+            this.toolStripTextBoxDicsonnect});
+            this.networkToolStripMenuItem1.Name = "networkToolStripMenuItem1";
+            this.networkToolStripMenuItem1.Size = new System.Drawing.Size(64, 20);
+            this.networkToolStripMenuItem1.Text = "Network";
+            // 
+            // toolStripTextBoxConnect
+            // 
+            this.toolStripTextBoxConnect.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBoxConnect.Name = "toolStripTextBoxConnect";
+            this.toolStripTextBoxConnect.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBoxConnect.Text = "Connect";
+            // 
+            // toolStripTextBoxDicsonnect
+            // 
+            this.toolStripTextBoxDicsonnect.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.toolStripTextBoxDicsonnect.Name = "toolStripTextBoxDicsonnect";
+            this.toolStripTextBoxDicsonnect.Size = new System.Drawing.Size(100, 23);
+            this.toolStripTextBoxDicsonnect.Text = "Disconnect";
             // 
             // textBoxConversation
             // 
             this.textBoxConversation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBoxConversation.Location = new System.Drawing.Point(48, 324);
+            this.textBoxConversation.Location = new System.Drawing.Point(24, 82);
             this.textBoxConversation.Multiline = true;
             this.textBoxConversation.Name = "textBoxConversation";
-            this.textBoxConversation.Size = new System.Drawing.Size(406, 242);
-            this.textBoxConversation.TabIndex = 5;
+            this.textBoxConversation.Size = new System.Drawing.Size(461, 220);
+            this.textBoxConversation.TabIndex = 6;
+            // 
+            // textBoxMessage
+            // 
+            this.textBoxMessage.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.textBoxMessage.Location = new System.Drawing.Point(48, 35);
+            this.textBoxMessage.Name = "textBoxMessage";
+            this.textBoxMessage.Size = new System.Drawing.Size(316, 20);
+            this.textBoxMessage.TabIndex = 7;
+            // 
+            // buttonSend
+            // 
+            this.buttonSend.Location = new System.Drawing.Point(379, 33);
+            this.buttonSend.Name = "buttonSend";
+            this.buttonSend.Size = new System.Drawing.Size(75, 23);
+            this.buttonSend.TabIndex = 8;
+            this.buttonSend.Text = "Send";
+            this.buttonSend.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.labelConversation);
+            this.panel1.Controls.Add(this.buttonSend);
+            this.panel1.Controls.Add(this.textBoxMessage);
+            this.panel1.Controls.Add(this.textBoxConversation);
+            this.panel1.Location = new System.Drawing.Point(0, 273);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(509, 317);
+            this.panel1.TabIndex = 12;
+            // 
+            // textBoxGame
+            // 
+            this.textBoxGame.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.textBoxGame.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBoxGame.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBoxGame.ForeColor = System.Drawing.SystemColors.Window;
+            this.textBoxGame.Location = new System.Drawing.Point(48, 111);
+            this.textBoxGame.Name = "textBoxGame";
+            this.textBoxGame.Size = new System.Drawing.Size(415, 55);
+            this.textBoxGame.TabIndex = 13;
+            this.textBoxGame.Text = "Game Goes Here";
+            this.textBoxGame.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // labelConversation
+            // 
+            this.labelConversation.AutoSize = true;
+            this.labelConversation.Location = new System.Drawing.Point(24, 63);
+            this.labelConversation.Name = "labelConversation";
+            this.labelConversation.Size = new System.Drawing.Size(69, 13);
+            this.labelConversation.TabIndex = 9;
+            this.labelConversation.Text = "Conversation";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(509, 587);
-            this.Controls.Add(this.textBoxConversation);
-            this.Controls.Add(this.labelConversation);
-            this.Controls.Add(this.buttonSend);
-            this.Controls.Add(this.textBoxMessage);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBoxGame);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.contextMenuStrip3.ResumeLayout(false);
+            this.contextMenuStrip5.ResumeLayout(false);
+            this.contextMenuStrip6.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip3;
+        private System.Windows.Forms.ToolStripMenuItem gameToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem networkToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip4;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip5;
+        private System.Windows.Forms.ToolStripMenuItem gameToolStripMenuItem1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip6;
+        private System.Windows.Forms.ToolStripMenuItem gameToolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem helloToolStripMenuItem;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripGame;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip7;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBoxExit;
+        private System.Windows.Forms.ToolStripMenuItem networkToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBoxConnect;
+        private System.Windows.Forms.ToolStripTextBox toolStripTextBoxDicsonnect;
+        private System.Windows.Forms.TextBox textBoxConversation;
         private System.Windows.Forms.TextBox textBoxMessage;
         private System.Windows.Forms.Button buttonSend;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.TextBox textBoxGame;
         private System.Windows.Forms.Label labelConversation;
-        private System.Windows.Forms.TextBox textBoxConversation;
     }
 }
 
