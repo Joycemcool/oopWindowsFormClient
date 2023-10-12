@@ -20,10 +20,11 @@ namespace ass1oopClientForm
         public NetworkStream stream;
         public Thread receiveThread;
         String message = string.Empty;
+        bool runServer;
         public Form1()
         {
             InitializeComponent();
-            //RunServer();
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -74,12 +75,17 @@ namespace ass1oopClientForm
 
         private void buttonSend_Click_1(object sender, EventArgs e)
         {
-            message = textBoxMessage.Text;
-            //AppendToConversationTextBox("Sending to server: " + message);
-            RunClient("127.0.0.1", message, this);
-            //RunClient("127.0.0.1", message); // Replace with your server details
-            textBoxMessage.Clear();
-            //myForm.AppendToConversationTextBox(message);
+            runServer = false;
+            if (!runServer)
+            {
+                message = textBoxMessage.Text;
+                RunClient("127.0.0.1", message, this);
+                textBoxMessage.Clear();
+            }
+            else
+            {
+                AppendToConversationTextBox("Connect first");
+            }
         }
 
 
@@ -95,17 +101,14 @@ namespace ass1oopClientForm
             //}
         }
 
-        private void testWriteMethod()
-        {
-
-        }
         //When connect start 
         public static void RunServer(int port, TcpListener server, Form1 myForm, String message)
         {
 
             //server = null;
-            server = new TcpListener(IPAddress.Any, port);
-            myForm.Invoke(new Action(() => myForm.AppendToConversationTextBox("Server started. Waiting for a connection...")));
+            //server = new TcpListener(IPAddress.Any, port);
+            server = null;
+            //myForm.Invoke(new Action(() => myForm.AppendToConversationTextBox("Server started. Waiting for a connection...")));
             try
             {
                 // Set the TcpListener on port 13000.
@@ -123,8 +126,8 @@ namespace ass1oopClientForm
                 //String data = null;
 
                 // Enter the listening loop.
-                while (true)
-                {
+                //while (true)
+               // {
                     //Console.Write("Waiting for a connection... ");
 
                     // Perform a blocking call to accept requests.
@@ -163,17 +166,17 @@ namespace ass1oopClientForm
 
                     // Shutdown and end connection
                     client.Close();
-                }
+                //}
             }
             catch (SocketException e)
             {
                 Console.WriteLine("SocketException: {0}", e);
             }
-            finally
-            {
-                // Stop listening for new clients.
-                server.Stop();
-            }
+            //finally
+            //{
+            //    // Stop listening for new clients.
+            //    server.Stop();
+            //}
 
 
             //Console.WriteLine("\nHit enter to continue...");
@@ -232,13 +235,16 @@ namespace ass1oopClientForm
                 Console.WriteLine("SocketException: {0}", e);
             }
 
-            Console.WriteLine("\n Press Enter to continue...");
-            Console.Read();
+           // Console.WriteLine("\n Press Enter to continue...");
+            //Console.Read();
         }
 
         private void toolStripTextBoxConnect_Click(object sender, EventArgs e)
         {
             //RunClient("127.0.0.1", message,this);
+            runServer = false;
+            AppendToConversationTextBox("Client started. Waiting for a connection...");
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -249,6 +255,12 @@ namespace ass1oopClientForm
         private void toolStripTextBoxExit_Click(object sender, EventArgs e)
         {
             Application.Exit(); 
+        }
+
+        private void toolStripTextBoxDicsonnect_Click(object sender, EventArgs e)
+        {
+            runServer = false;
+            //server.Stop();
         }
     }//end class
 }//end namespace

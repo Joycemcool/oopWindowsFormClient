@@ -172,7 +172,7 @@
             this.toolStripTextBoxConnect,
             this.toolStripTextBoxDicsonnect});
             this.networkToolStripMenuItem1.Name = "networkToolStripMenuItem1";
-            this.networkToolStripMenuItem1.Size = new System.Drawing.Size(124, 36);
+            this.networkToolStripMenuItem1.Size = new System.Drawing.Size(124, 38);
             this.networkToolStripMenuItem1.Text = "Network";
             // 
             // toolStripTextBoxConnect
@@ -189,6 +189,7 @@
             this.toolStripTextBoxDicsonnect.Name = "toolStripTextBoxDicsonnect";
             this.toolStripTextBoxDicsonnect.Size = new System.Drawing.Size(100, 39);
             this.toolStripTextBoxDicsonnect.Text = "Disconnect";
+            this.toolStripTextBoxDicsonnect.Click += new System.EventHandler(this.toolStripTextBoxDicsonnect_Click);
             // 
             // contextMenuStrip7
             // 
