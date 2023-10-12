@@ -145,7 +145,7 @@
             this.networkToolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1018, 42);
+            this.menuStrip1.Size = new System.Drawing.Size(1018, 40);
             this.menuStrip1.TabIndex = 11;
             this.menuStrip1.Text = "Network";
             // 
@@ -276,7 +276,7 @@
             this.textBoxGame.Name = "textBoxGame";
             this.textBoxGame.Size = new System.Drawing.Size(830, 109);
             this.textBoxGame.TabIndex = 13;
-            this.textBoxGame.Text = "Game Goes Here";
+            this.textBoxGame.Text = "This is Client";
             this.textBoxGame.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form1
@@ -290,7 +290,7 @@
             this.Controls.Add(this.menuStrip1);
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Client";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.contextMenuStrip3.ResumeLayout(false);
             this.contextMenuStrip5.ResumeLayout(false);
