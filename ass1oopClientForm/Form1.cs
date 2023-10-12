@@ -11,6 +11,8 @@ using System.Threading.Tasks;
 using System.Threading;
 using System.Windows.Forms;
 
+//This is the client
+
 namespace ass1oopClientForm
 {
     public partial class Form1 : Form
@@ -73,12 +75,14 @@ namespace ass1oopClientForm
 
         }
 
+        //CLIENT
         private void buttonSend_Click_1(object sender, EventArgs e)
         {
             runServer = false;
             if (!runServer)
             {
                 message = textBoxMessage.Text;
+                AppendToConversationTextBox("Sending to server: " + message);
                 RunClient("127.0.0.1", message, this);
                 textBoxMessage.Clear();
             }
@@ -88,27 +92,18 @@ namespace ass1oopClientForm
             }
         }
 
-
+        //CLIENT
         private void AppendToConversationTextBox(string message)
         {
-            //if (textBoxConversation.InvokeRequired)
-            //{
-            //    textBoxConversation.Invoke(new Action<string>(AppendToConversationTextBox), message);
-            //}
-            //else
-            //{
                 textBoxConversation.AppendText(message + Environment.NewLine);
-            //}
         }
 
-        //When connect start 
+        //When connect start CLIENT
         public static void RunServer(int port, TcpListener server, Form1 myForm, String message)
         {
 
-            //server = null;
             //server = new TcpListener(IPAddress.Any, port);
             server = null;
-            //myForm.Invoke(new Action(() => myForm.AppendToConversationTextBox("Server started. Waiting for a connection...")));
             try
             {
                 // Set the TcpListener on port 13000.
@@ -183,6 +178,7 @@ namespace ass1oopClientForm
             //Console.Read();
         }
 
+        //CLIENT
         public static void RunClient(String server, String message, Form1 myForm)
         {
             try
@@ -192,7 +188,7 @@ namespace ass1oopClientForm
                 // connected to the same address as specified by the server, port
                 // combination.
                 Int32 port = 13000;
-                TcpClient client = new TcpClient(server, port);
+                TcpClient tcpClient = new TcpClient(server, port);
 
                 // Translate the passed message into ASCII and store it as a Byte array.
                 Byte[] data = System.Text.Encoding.ASCII.GetBytes(message);
@@ -200,7 +196,7 @@ namespace ass1oopClientForm
                 // Get a client stream for reading and writing.
                 //  Stream stream = client.GetStream();
 
-                NetworkStream stream = client.GetStream();
+                NetworkStream stream = tcpClient.GetStream();
 
                 // Send the message to the connected TcpServer. 
                 stream.Write(data, 0, data.Length);
@@ -222,9 +218,9 @@ namespace ass1oopClientForm
                 //Console.WriteLine("Received: {0}", responseData);
                 myForm.AppendToConversationTextBox(responseData);
 
-                // Close everything.
+                // Close everything.//HOW TO CLOSE CLIENT
                 stream.Close();
-                client.Close();
+                tcpClient.Close();
             }
             catch (ArgumentNullException e)
             {
@@ -233,7 +229,7 @@ namespace ass1oopClientForm
             catch (SocketException e)
             {
                 Console.WriteLine("SocketException: {0}", e);
-            }
+            } 
 
            // Console.WriteLine("\n Press Enter to continue...");
             //Console.Read();
@@ -260,7 +256,7 @@ namespace ass1oopClientForm
         private void toolStripTextBoxDicsonnect_Click(object sender, EventArgs e)
         {
             runServer = false;
-            //server.Stop();
+            tcpClient.Close();
         }
     }//end class
 }//end namespace
