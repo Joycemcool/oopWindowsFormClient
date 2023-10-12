@@ -17,6 +17,9 @@ namespace ass1oopClientForm
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
+
+            //How to start the server when click
+            //Application.Run()
         }
     }
 }
